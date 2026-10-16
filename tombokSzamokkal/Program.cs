@@ -92,6 +92,8 @@
             OsszegzesTetel();
             MegszamlalasTetel();
             EldontesTetel();
+            KeresesTetel();
+            KivalasztasTetel();
         }
     }
 }
