@@ -41,11 +41,57 @@
             }
             Console.WriteLine($"A tömb negatív elemeinek száma: {negativSzamok}");
         }
+
+        static void EldontesTetel()
+        {
+            int i = 0;
+            while (i < tomb.Length && tomb[i] != 0)
+            {
+                i++;
+            }
+            if (i < tomb.Length)
+            {
+                Console.WriteLine("Van 0");
+            }
+            else
+            {
+                Console.WriteLine("Nincs 0");
+            }
+        }
+        static void KeresesTetel()
+        {
+            int keresett = 0; // van e 0, ha van, akkor az indexét is írjuk ki
+            int i = 0;
+            while (i < tomb.Length && tomb[i] != keresett)
+            {
+                i++;
+            }
+            if (i < tomb.Length)
+            {
+                Console.WriteLine($"A keresett szám az {i}. indexen van.");
+            }
+            else
+            {
+                Console.WriteLine("Nincs a tömbben a keresett szám.");
+            }
+        }
+        static void KivalasztasTetel()
+        {
+            //tudjuk, hogy a tömbben van a keresett elem, keressük meg az indexét
+            tomb[8] = 10;
+            int i = 0;
+            while (tomb[i] != 10)
+            {
+                i++;
+            }
+            Console.WriteLine($"A keresett szám az {i+1}. helyen van.");
+        }
         static void Main(string[] args)
         {
             Feltolt();
             OsszegzesTetel();
             MegszamlalasTetel();
+            EldontesTetel();
         }
     }
 }
