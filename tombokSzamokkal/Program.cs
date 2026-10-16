@@ -19,9 +19,33 @@
             Console.WriteLine();
         }
 
+        static void OsszegzesTetel()
+        {
+            int osszeg = 0;
+            foreach (int item in tomb)
+            {
+                osszeg += item;
+            }
+            Console.WriteLine("A tömb elemeinek összege: " + osszeg);
+        }
+
+        static void MegszamlalasTetel()
+        {
+            int negativSzamok = 0;
+            foreach (int item in tomb)
+            {
+                if (item < 0)
+                {
+                    negativSzamok++;
+                }
+            }
+            Console.WriteLine($"A tömb negatív elemeinek száma: {negativSzamok}");
+        }
         static void Main(string[] args)
         {
             Feltolt();
+            OsszegzesTetel();
+            MegszamlalasTetel();
         }
     }
 }
